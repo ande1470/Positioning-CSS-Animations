@@ -1,0 +1,50 @@
+body {
+    background-color: #f0f8ff; 
+    overflow: hidden; 
+}
+
+@keyframes slide {
+    from { left: 0; }
+    to { left: 80%; }
+}
+
+.sliding_heart {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 10%; 
+    background-image: url(heart.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 3s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    0%   { background-color: #FFB0AA; left: 10%; top: 20%; }
+    25%  { background-color: #E89BB0; left: 30%; top: 40%; }
+    50%  { background-color: #FFB7EF; left: 50%; top: 30%; }
+    75%  { background-color: #DD9BE8; left: 70%; top: 50%; }
+    100% { background-color: #DBAAFF; left: 10%; top: 20%; }
+}
+
+.moving_ad {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 50%; /* Centered vertically */
+    left: 10%; /* Starting position */
+    background-color: #FFB0AA; /* Initial color */
+    border: 2px solid #DBAAFF; /* A border to make it stand out */
+    border-radius: 10px; /* Rounded corners */
+    animation-duration: 4s;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
